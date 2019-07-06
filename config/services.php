@@ -41,9 +41,9 @@ return [
             'redirect'      => env('FACEBOOK_URL'),
         ],
     'twitter' => [
-            'client_id'     => env('TWITTER_CLIENT_ID'),
-            'client_secret' => env('TWITTER_CLIENT_SECRET'),
-            'redirect'      => env('TWITTER_URL'),
+            'client_id'     => 'WIOElxB0BOqXiiR0TwDkdS3t3',
+            'client_secret' => 'sd7rQaqHzmHkuSWyDpovSyMn7bPl5YHD4LFuOuPOLnw11lPS0k',
+            'redirect'      => 'http://127.0.0.1:8000/login/twitter/callback',
         ],
     /* 'google' => [
             'client_id'     => env('GOOGLE_CLIENT_ID'),

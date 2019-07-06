@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -6,33 +7,8 @@ use Socialite;
 use Auth;
 use App\User;
 
-class SocialController extends Controller
+class TwitterLoginController extends Controller
 {
-    public function redirect($provider)
-    {
-    	return Socialite::driver($provider)->redirect();
-    }
- 
-    public function Callback($provider)
-    {
-        $userSocial 	=   Socialite::driver($provider)->stateless()->user();
-        $users       	=   User::where(['email' => $userSocial->getEmail()])->first();
-        if($users){
-            Auth::login($users);
-            return redirect('/home');
-        }else{
-            $user = User::create([
-                'name'          => $userSocial->getName(),
-                'email'         => $userSocial->getEmail(),
-                'image'         => $userSocial->getAvatar(),
-                'provider_id'   => $userSocial->getId(),
-                'provider'      => $provider,
-            ]);
-            
-            return redirect('/home');
-        }
-    }
-    
     public function twitterRedirect()
     {
     	return Socialite::driver('twitter')->redirect();
@@ -41,6 +17,9 @@ class SocialController extends Controller
     {
         $twitterSocial =   Socialite::driver('twitter')->user();
         $users       =   User::where(['email' => $twitterSocial->getEmail()])->first();
+
+        dd($twitterSocial);
+
         if($users){
             Auth::login($users);
             return redirect('/home');
