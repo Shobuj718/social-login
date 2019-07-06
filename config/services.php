@@ -45,10 +45,16 @@ return [
             'client_secret' => env('TWITTER_CLIENT_SECRET'),
             'redirect'      => env('TWITTER_URL'),
         ],
-    'google' => [
+    /* 'google' => [
             'client_id'     => env('GOOGLE_CLIENT_ID'),
             'client_secret' => env('GOOGLE_CLIENT_SECRET'),
             'redirect'      => env('GOOGLE_URL'),
+        ],*/
+
+    'google' => [
+            'client_id'     => '861209555612-smn7rlh91356kmr9ldbqa7kpbgl1or3q.apps.googleusercontent.com',
+            'client_secret' => 'cqX_8UVFj15qKTgjs9s6w4bR',
+            'redirect'      => 'http://localhost:8000/login/google/callback',
         ],
 
 ];
