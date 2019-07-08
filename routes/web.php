@@ -34,3 +34,5 @@ Route::get('login/twitter/callback', 'TwitterLoginController@TwitterCallback');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('locales/{lang}', 'LocalController@index');
+

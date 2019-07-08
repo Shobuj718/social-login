@@ -5,13 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>লারাভেল</title>
+        <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
         <!-- Styles -->
         <style>
@@ -79,17 +76,15 @@
                         <a href="#">@lang('header.service')</a>
                         <a href="#">@lang('header.product')</a>
 
-                        <a href="{{ route('login') }}">@lang('header.login')</a>
-                        <a href="{{ route('register') }}">@lang('header.register')</a>
-                        
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Lang
-                            <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="/locales/en">English</a></li>
-                              <li><a class="dropdown-item" href="/locales/bn">Bangla</a></li>
-                            </ul>
-                        </div>
+                        <a href="{{ route('login') }}">@lang('header.contact')</a>
+                        <a href="{{ route('register') }}">Register</a>
+                        <li class="nav-item dropdown">
+                            <!-- <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" ara-expanded="false">as</a> -->
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/locales/en">English</a>
+                                <a class="dropdown-item" href="/locales/bn">Bangla</a>
+                            </div>
+                        </li>
                     @endauth
                 </div>
             @endif
